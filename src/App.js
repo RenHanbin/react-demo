@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Content from "./component/js/index_content";
+import Register from "./component/js/register_content";
+import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// 1.自定义登录注册组件
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <Route exact path="/" component={Content} />
+          <Route path="/Register" component={Register} />
+        </div>
+      </Router>
+    );
+  }
 }
-
 export default App;
