@@ -1,0 +1,60 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  width: 500px;
+}
+.box .box-header {
+  text-align: center;
+}
+.box .box-header .register {
+  height: 100px;
+  color: darkorange;
+  font-size: 28px;
+  font-weight: 200;
+}
+.box .register-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+}
+.box .register-form .email {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.box .register-form .username {
+  display: flex;
+  justify-content: center;
+}
+.box .register-form .password {
+  display: flex;
+  justify-content: center;
+}
+.box .register-form .confirm {
+  display: flex;
+  justify-content: center;
+}
+.box .register-form .phone {
+  display: flex;
+  justify-content: center;
+}
+.box .register-form .form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.box .register-form .form-button .register-button {
+  width: 200px;
+  border-color: rgb(255, 102, 0);
+  background-color: darkorange;
+}
+.box .box-footer {
+  text-align: center;
+  height: 100px;
+}

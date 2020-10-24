@@ -1,0 +1,46 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box .box-header {
+  text-align: center;
+}
+.box .box-header .welcome {
+  height: 100px;
+  color: darkorange;
+  font-size: 28px;
+  font-weight: 200;
+}
+.box .login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+}
+.box .login-form .username {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.box .login-form .password {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.box .login-form .login-form-button {
+  display: flex;
+  justify-content: center;
+}
+.box .login-form-button .login-button {
+  width: 180px;
+  border-color: rgb(255, 102, 0);
+  background-color: darkorange;
+}
+.box .box-footer {
+  text-align: center;
+  height: 100px;
+  text-decoration: underline;
+}

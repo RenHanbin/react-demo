@@ -2,12 +2,18 @@
   "name": "login-and-register",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.7.0",
+    "axios": "^0.20.0",
+    "md5": "^2.3.0",
+    "promise": "^8.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
@@ -18,6 +24,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded"
   },
   "browserslist": {
     "production": [
