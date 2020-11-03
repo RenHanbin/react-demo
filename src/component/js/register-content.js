@@ -39,7 +39,7 @@ class Register extends React.Component {
       password：${password}
       userPhone:${userPhone}
       userEmail:${userEmail}`
-    );
+    );  
     // 数据传递后台
     axios
       .get('http://localhost:4000/register', {

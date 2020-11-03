@@ -2,13 +2,14 @@
  * index_content.js
  * 首页登录注册content——表单样式
  */
-import React from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 import { Button, Form, Input } from 'antd';
 import { Link } from 'react-router-dom';
 import md5 from 'md5';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import '../css/index-content.css';
+import MySelect from '../js/select-text';
 
 const formItemLayout = {
   labelCol: {
@@ -29,12 +30,83 @@ const formItemLayout = {
   },
 };
 
-class Content extends React.Component {
+/* // 1.首先要做的就是把类组件改成函数组件
+function Content(){
+  // 因为是登陆界面，所以添加两个变量username，password
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  // return函数
+  return (
+    <div className="box">
+      <div className="box-header">
+        <span className="welcome">登录</span>
+      </div>
+      <Form
+        {...formItemLayout}
+        className="login-form"
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={this.gotoLogin}
+      >
+        <Form.Item
+          className="username"
+          name="username"
+          rules={[
+            {
+              required: true,
+              message: '用户名不能为空！',
+            },
+          ]}
+        >
+          <Input prefix={<UserOutlined />} placeholder="请输入您的用户名" />
+        </Form.Item>
+        <Form.Item
+          className="password"
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: '密码不能为空！',
+            },
+          ]}
+        >
+          <Input
+            prefix={<LockOutlined />}
+            type="password"
+            name="password"
+            placeholder="请输入您的密码"
+          />
+        </Form.Item>
+        <Form.Item className="login-form-button">
+          <Button
+            className="login-button"
+            type="primary"
+            shape="round"
+            htmlType="submit"
+          >
+            登录
+          </Button>
+        </Form.Item>
+      </Form>
+      <div className="box-footer">
+        <Link to="/Register/">没有账号？</Link>
+      </div>
+      <div>
+        <MySelect/>
+      </div>
+    </div>
+  );
+
+}
+ */
+ class Content extends React.Component {
   /**
    * form表单提交行为处理（登录处理）
    * @param {Object} value 表单参数对象
    */
-  gotoLogin(value) {
+   gotoLogin(value) {
     // 获取用户名和密码，进行与后台的连接
     const { username, password } = value;
     console.log(`username:${username};userPwd:${password}`);
@@ -53,9 +125,9 @@ class Content extends React.Component {
       .catch(function (err) {
         console.log(err);
       });
-  }
+  } 
 
-  render() {
+   render() {
     return (
       <div className="box">
         <div className="box-header">
@@ -112,9 +184,12 @@ class Content extends React.Component {
         <div className="box-footer">
           <Link to="/Register/">没有账号？</Link>
         </div>
+        <div>
+          <MySelect id="mySelect" />
+        </div>
       </div>
     );
   }
-}
+}  
 
 export default Content;
